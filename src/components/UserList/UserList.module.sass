@@ -1,0 +1,25 @@
+@import 'styles/styles.sass'
+
+.list
+  max-width: 800px
+  width: 100%
+  margin: 40px auto
+  border-radius: 25px
+  li
+    padding: 10px 15px
+    &:not(:last-of-type)
+      border-bottom: 1px solid grey
+    &:last-of-type
+      margin-bottom: 15px
+  .buttonContainer
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+
+@include screen-size(768px)
+  .list
+    padding: 0 15px
+    .buttonContainer
+      width: 75%
+      margin: 0 auto

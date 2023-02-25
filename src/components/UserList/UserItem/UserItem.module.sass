@@ -1,0 +1,34 @@
+@import 'styles/styles.sass'
+
+.container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 10px
+  .left
+    display: flex
+    align-items: center
+    gap: 15px
+    .name
+      font-weight: 600
+      font-size: 1rem
+      margin-bottom: 10px
+    .nickname
+      font-weight: 500
+      font-size: 1rem
+      color: #b1b1b1
+    .image
+      max-width: 100px
+      border-radius: 50%
+      border: 1px solid grey
+  .right
+    width: 70px
+
+@include screen-size(425px)
+  .container
+    flex-direction: column
+    gap: 20px
+    .left
+      flex-direction: column
+    .right
+      width: 70%
