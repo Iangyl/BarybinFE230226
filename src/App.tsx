@@ -1,23 +1,21 @@
 import React, { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from 'pages/Home';
-import User from 'assets/User';
 import users from 'assets/initData.json';
-import { useAppDispatch } from 'redux/hooks';
+import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { setUsers } from 'redux/app/appSlice';
+import UserList from 'components/UserList/UserList';
 
 function App() {
   const dispatch = useAppDispatch();
+  const data = useAppSelector((state) => state.users);
 
   useEffect(() => {
     dispatch(setUsers(users));
   });
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/user" element={<User />} />
-    </Routes>
+    <section>
+      <UserList data={data} />
+    </section>
   );
 }
 
