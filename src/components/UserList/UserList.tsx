@@ -29,7 +29,7 @@ const UserList = ({ data }: { data: IUser[] }) => {
       {dataToShow &&
         dataToShow.map((item) => (
           <li key={item.phone}>
-            <UserItem name={item.name} nickname={item.nickname} photo={''} />
+            <UserItem {...item} />
           </li>
         ))}
       <div className={styles.buttonContainer}>

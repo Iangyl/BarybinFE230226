@@ -1,0 +1,49 @@
+@import 'styles/styles.sass'
+
+.userCard
+  width: 100%
+  .top
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    gap: 20px
+    border-bottom: 1px solid #b1b1b1
+    padding-bottom: 12px
+    .avatar
+      width: 126px
+    div
+      .name
+        font-weight: 600
+        font-size: 1rem
+        margin-bottom: 10px
+      .nickname
+        font-weight: 500
+        font-size: 1rem
+        color: #b1b1b1
+  .middle
+    width: 100%
+    padding: 20px 15px 30px 15px
+    .row
+      display: flex
+      align-items: center
+      gap: 20px
+      &:not(:last-of-type)
+        margin-bottom: 7px
+      .cellLeft
+        width: 60px
+        font-size: 1rem
+        font-weight: 600
+    @include screen-size(375px)
+      .row
+        flex-direction: column
+        justify-content: start
+        gap: 10px
+        .cellLeft
+          width: 100%
+        p
+          &:last-of-type
+            width: 100%
+            text-align: left
+  .bottom
+    width: 100%

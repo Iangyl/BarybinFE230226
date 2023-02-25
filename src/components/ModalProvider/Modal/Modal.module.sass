@@ -1,0 +1,17 @@
+@import 'styles/styles.sass'
+
+.modal
+  background-color: #fff
+  padding: 8px 10px 20px 10px
+  border: 1px solid #cecece
+
+.closeContainer
+  display: flex
+  justify-content: end
+  .closeBtn
+    &:hover
+      cursor: pointer
+
+@include screen-size(375px)
+  .modal
+    width: 300px

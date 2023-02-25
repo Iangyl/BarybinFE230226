@@ -8,6 +8,7 @@ import 'styles/global.css';
 import App from './App';
 import { store } from 'redux/store';
 import reportWebVitals from './reportWebVitals';
+import ModalProvider from 'components/ModalProvider/ModalProvider';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,9 +16,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ModalProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ModalProvider>
     </Provider>
   </React.StrictMode>
 );

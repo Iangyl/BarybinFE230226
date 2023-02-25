@@ -60,3 +60,27 @@ hr {
   border-style: inset;
   border-width: 1px;
 }
+
+a:link {
+  color: blue;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:visited {
+  color: red;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:link:active {
+  color: (internal value);
+}
+
+a:visited:active {
+  color: (internal value);
+}
+
+a:hover {
+  cursor: pointer;
+}

@@ -6,6 +6,7 @@ import { IUser } from 'lib/userInterface';
 
 const initialState: IState = {
   users: [],
+  currentUser: null,
 };
 
 export const appSlice = createSlice({
@@ -15,9 +16,12 @@ export const appSlice = createSlice({
     setUsers: (state, action: PayloadAction<IUser[]>) => {
       state.users = action.payload;
     },
+    setCurrentUser: (state, action: PayloadAction<IUser>) => {
+      state.currentUser = action.payload;
+    },
   },
 });
 
-export const { setUsers } = appSlice.actions;
+export const { setUsers, setCurrentUser } = appSlice.actions;
 
 export default appSlice.reducer;
